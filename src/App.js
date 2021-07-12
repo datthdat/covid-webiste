@@ -24,6 +24,7 @@ function App() {
       const { Slug } = countries.find(
         (country) => country.ISO2.toLowerCase() === selectedCountryId
       );
+
       // call api
       getReportByCountry(Slug).then((res) => {
         // delete the last item in array res.data
@@ -33,6 +34,9 @@ function App() {
       )
     }
   }, [countries, selectedCountryId])
+
+
+  // new branch
 
   return (
     <div>

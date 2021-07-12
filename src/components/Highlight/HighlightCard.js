@@ -1,7 +1,7 @@
 import { Card, CardContent, makeStyles, Typography } from "@material-ui/core";
 import React from 'react'
 
-function HighlighCard({ title, count, type }) {
+function HighlightCard({ title, number, type }) {
 
     const useStyles = makeStyles({
         wrapper: (props) => {
@@ -13,11 +13,12 @@ function HighlighCard({ title, count, type }) {
             fontSize: 18,
             marginBottom: 5
         },
-        count: {
-            fontWeight: 'bold',
-            fontSize: 18
+        number: {
+            fontSize: 18,
+            marginBottom: 5
         }
     })
+
 
     const styles = useStyles({ type })
     return (
@@ -27,8 +28,8 @@ function HighlighCard({ title, count, type }) {
                     <Typography component="p" variant="body2" className={styles.title}>
                         {title}
                     </Typography>
-                    <Typography component="span" variant="body2" className={styles.count}>
-                        {count}
+                    <Typography component="span" variant="body2" className={styles.number}>
+                        {number}
                     </Typography>
                 </CardContent>
             </Card>
@@ -36,4 +37,4 @@ function HighlighCard({ title, count, type }) {
     )
 }
 
-export default HighlighCard
+export default HighlightCard
